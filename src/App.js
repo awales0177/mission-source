@@ -10,11 +10,12 @@ function App() {
   return (
     <div>
       <div class="text-header">
-        <h1>Mission Source </h1>
+        <h1>Life Source Missions</h1>
       </div>
       <div class="text-sub-header">
-        <h1>Create beautiful SVG maps in react with d3-geo and <br></br>
-          topojson using a declarative api. 
+        <h1>Spreading the transformative power of Christ globally,<br></br>
+          extending support to communities in need.<br></br>
+          
         </h1>
       </div>
       <ReactTooltip id="my-tooltip" />

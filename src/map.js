@@ -16,7 +16,8 @@ const geoUrl = "/features.json";
 
 const colorScale = scaleLinear()
   .domain([0.29, 0.68])
-  .range(["#ffedea", "#ff5233"]);
+  .range(["#169dd3", "#ebf7f9"]);
+  //.range(["#ebf7f9", "#169dd3"]);
 
 const MapChart = ({setTooltipContent}) => {
   const [data, setData] = useState([]);
@@ -48,10 +49,12 @@ const MapChart = ({setTooltipContent}) => {
                   key={geo.rsmKey}
                   geography={geo}
                   fill={d ? colorScale(d["2017"]) : "#F5F4F6"}
+                  stroke="#FFF"
+                  strokeWidth={.5}
                   //onClick={handleClick(geo.properties)}
                   style={{
                     default: {
-                        outline: 'none'
+                        outline: 'white'
                     },
                     hover: {
                         outline: 'none'
@@ -69,8 +72,8 @@ const MapChart = ({setTooltipContent}) => {
       <Marker coordinates={[-74.006, 40.7128]}
       >
       <g
-            fill="none"
-            stroke="#FF5533"
+            fill="#d18365"
+            stroke="white"
             data-tooltip-id="my-tooltip"
             data-tooltip-content="Life Source International"
             strokeWidth="2"
@@ -90,8 +93,8 @@ const MapChart = ({setTooltipContent}) => {
       <Marker coordinates={[-100, 20]}
       >
       <g
-            fill="none"
-            stroke="#FF5533"
+            fill="#d18365"
+            stroke="white"
             data-tooltip-id="my-tooltip"
             data-tooltip-content="Site 1"
             strokeWidth="2"
@@ -105,9 +108,9 @@ const MapChart = ({setTooltipContent}) => {
             <circle cx="12" cy="10" r="3" />
             <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
           </g>
-        
       </Marker>
     </ComposableMap>
+    
   );
 };
 
