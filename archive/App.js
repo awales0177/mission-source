@@ -9,18 +9,9 @@ function App() {
   const [content, setContent] = useState("");
   return (
     <div>
-      <div class="text-header">
-        <h1>Mission Source </h1>
-      </div>
-      <div class="text-sub-header">
-        <h1>Create beautiful SVG maps in react with d3-geo and <br></br>
-          topojson using a declarative api. 
-        </h1>
-      </div>
+      <h1>Mission Source</h1>
       <ReactTooltip id="my-tooltip" />
-      <div class="center">
       <MapChart setTooltipContent={setContent} />
-      </div>
     </div>
   );
 }
